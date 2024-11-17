@@ -23,260 +23,262 @@ public class ConfigureABusiness {
 
     public static Business initialize() {
         Business business = new Business("Xerox");
+        //Keeping suppliers for car category
+        //Supplier 1 - Tesla
+        Supplier s1 = business.getSupplierDirectory().newSupplier("Tesla");
+        ProductCatalog productCatalog1 = s1.getProductCatalog();
+        Product pr1 = productCatalog1.newProduct("Tesla Model S Plaid", 100000, 140000, 120000);
+        Product pr2 = productCatalog1.newProduct("Tesla Model X", 90000, 130000, 110000);
+        Product pr3 = productCatalog1.newProduct("Tesla Model 3 Performance", 50000, 70000, 60000);
+        Product pr4 = productCatalog1.newProduct("Tesla Model Y", 55000, 75000, 65000);
+        Product pr5 = productCatalog1.newProduct("Tesla Cybertruck (Dual Motor)", 50000, 80000, 70000);
+        Product pr6 = productCatalog1.newProduct("Tesla Roadster", 180000, 250000, 200000);
+        Product pr7 = productCatalog1.newProduct("Tesla Model 3 Standard", 35000, 45000, 40000);
+        Product pr8 = productCatalog1.newProduct("Tesla Semi", 150000, 180000, 165000);
+        Product pr9 = productCatalog1.newProduct("Tesla Model X Plaid", 110000, 150000, 130000);
+        Product pr10 = productCatalog1.newProduct("Tesla Cybertruck (Tri-Motor)", 70000, 100000, 85000);
+        business.getSupplierPerformanceReport(String.valueOf(s1));
 
-        //Supplier 1 - Samsung
-        Supplier supplier1 = business.getSupplierDirectory().newSupplier("Samsung");
-        ProductCatalog productCatalog1 = supplier1.getProductCatalog();
-        //newProduct(String n, int fp, int cp, int tp)
-        Product product1 = productCatalog1.newProduct("Galaxy S21", 900, 2000, 1450);
-        Product product2 = productCatalog1.newProduct("Galaxy S20", 1000, 2100, 1550);
-        Product product3 = productCatalog1.newProduct("Galaxy S10", 800, 1800, 1300);
-        Product product4 = productCatalog1.newProduct("Galaxy S9", 850, 1900, 1375);
-        Product product5 = productCatalog1.newProduct("Galaxy S8", 750, 1700, 1225);
-        Product product6 = productCatalog1.newProduct("Galaxy S7", 770, 1750, 1260);
-        Product product7 = productCatalog1.newProduct("Galaxy S6", 700, 1600, 1150);
-        Product product8 = productCatalog1.newProduct("Galaxy S5", 720, 1650, 1185);
-        Product product9 = productCatalog1.newProduct("Galaxy S4", 600, 1400, 1000);
-        Product product10 = productCatalog1.newProduct("Galaxy S3", 610, 1450, 1030);
-        business.getSupplierPerformanceReport(String.valueOf(supplier1));
+        
+        //Supplier 2 - Toyota
+        Supplier s2 = business.getSupplierDirectory().newSupplier("Toyota");
+        ProductCatalog productCatalog2 = s2.getProductCatalog();
+        Product pr11 = productCatalog2.newProduct("Toyota Corolla", 20000, 30000, 25000);
+        Product pr12 = productCatalog2.newProduct("Toyota Camry", 25000, 35000, 30000);
+        Product pr13 = productCatalog2.newProduct("Toyota RAV4", 27000, 40000, 35000);
+        Product pr14 = productCatalog2.newProduct("Toyota Highlander", 35000, 50000, 45000);
+        Product pr15 = productCatalog2.newProduct("Toyota Tacoma", 26000, 45000, 35000);
+        Product pr16 = productCatalog2.newProduct("Toyota Tundra", 40000, 60000, 50000);
+        Product pr17 = productCatalog2.newProduct("Toyota Prius", 25000, 35000, 30000);
+        Product pr18 = productCatalog2.newProduct("Toyota 4Runner", 38000, 55000, 45000);
+        Product pr19 = productCatalog2.newProduct("Toyota Sienna", 35000, 50000, 45000);
+        Product pr20 = productCatalog2.newProduct("Toyota Supra", 43000, 60000, 55000);
+        business.getSupplierPerformanceReport(String.valueOf(s2));
 
-        //Supplier 2 - Apple
-        Supplier supplier2 = business.getSupplierDirectory().newSupplier("Apple");
-        ProductCatalog productCatalog2 = supplier2.getProductCatalog();
-        Product product11 = productCatalog2.newProduct("iPhone 12", 1100, 2400, 1750);
-        Product product12 = productCatalog2.newProduct("iPhone 11", 950, 2300, 1625);
-        Product product13 = productCatalog2.newProduct("iPhone X", 850, 2200, 1525);
-        Product product14 = productCatalog2.newProduct("iPhone 8", 800, 2100, 1450);
-        Product product15 = productCatalog2.newProduct("iPhone 7", 750, 2000, 1375);
-        Product product16 = productCatalog2.newProduct("iPhone 6", 700, 1900, 1300);
-        Product product17 = productCatalog2.newProduct("iPhone 5", 600, 1800, 1200);
-        Product product18 = productCatalog2.newProduct("iPhone 4", 550, 1700, 1125);
-        Product product19 = productCatalog2.newProduct("iPhone 3", 500, 1600, 1050);
-        Product product20 = productCatalog2.newProduct("iPhone 2", 480, 1550, 1015);
-        business.getSupplierPerformanceReport(String.valueOf(supplier2));
+        
+        //Supplier 3 - Ford
+        Supplier s3 = business.getSupplierDirectory().newSupplier("Ford");
+        ProductCatalog productCatalog3 = s3.getProductCatalog();
+        Product pr21 = productCatalog3.newProduct("Ford F-150", 30000, 70000, 50000);
+        Product pr22 = productCatalog3.newProduct("Ford Mustang", 27000, 80000, 55000);
+        Product pr23 = productCatalog3.newProduct("Ford Explorer", 35000, 55000, 45000);
+        Product pr24 = productCatalog3.newProduct("Ford Edge", 33000, 48000, 40000);
+        Product pr25 = productCatalog3.newProduct("Ford Ranger", 25000, 45000, 38000);
+        Product pr26 = productCatalog3.newProduct("Ford Bronco", 28000, 60000, 45000);
+        Product pr27 = productCatalog3.newProduct("Ford Escape", 24000, 40000, 35000);
+        Product pr28 = productCatalog3.newProduct("Ford Transit", 35000, 60000, 50000);
+        Product pr29 = productCatalog3.newProduct("Ford Expedition", 50000, 80000, 65000);
+        Product pr30 = productCatalog3.newProduct("Ford Mach-E", 43000, 65000, 55000);
+        business.getSupplierPerformanceReport(String.valueOf(s3));
 
-        //Supplier 3 - Google
-        Supplier supplier3 = business.getSupplierDirectory().newSupplier("Google");
-        ProductCatalog productCatalog3 = supplier3.getProductCatalog();
-        Product product21 = productCatalog3.newProduct("Pixel 5", 1000, 2000, 1500);
-        Product product22 = productCatalog3.newProduct("Pixel 4", 950, 1950, 1450);
-        Product product23 = productCatalog3.newProduct("Pixel 3", 870, 1900, 1385);
-        Product product24 = productCatalog3.newProduct("Pixel 2", 830, 1850, 1340);
-        Product product25 = productCatalog3.newProduct("Pixel 1", 790, 1800, 1295);
-        Product product26 = productCatalog3.newProduct("Nexus 6P", 740, 1750, 1245);
-        Product product27 = productCatalog3.newProduct("Nexus 5X", 690, 1700, 1195);
-        Product product28 = productCatalog3.newProduct("Nexus 5", 650, 1650, 1150);
-        Product product29 = productCatalog3.newProduct("Nexus 4", 600, 1600, 1100);
-        Product product30 = productCatalog3.newProduct("Nexus 3", 580, 1550, 1065);
-        business.getSupplierPerformanceReport(String.valueOf(supplier3));
+        
+        //Supplier 4 - BMW
+        Supplier s4 = business.getSupplierDirectory().newSupplier("BMW");
+        ProductCatalog productCatalog4 = s4.getProductCatalog();
+        Product pr31 = productCatalog4.newProduct("BMW 3 Series", 40000, 60000, 50000);
+        Product pr32 = productCatalog4.newProduct("BMW 5 Series", 50000, 70000, 60000);
+        Product pr33 = productCatalog4.newProduct("BMW X3", 43000, 58000, 50000);
+        Product pr34 = productCatalog4.newProduct("BMW X5", 60000, 85000, 75000);
+        Product pr35 = productCatalog4.newProduct("BMW 7 Series", 90000, 120000, 100000);
+        Product pr36 = productCatalog4.newProduct("BMW X1", 37000, 45000, 40000);
+        Product pr37 = productCatalog4.newProduct("BMW i3 (Electric)", 45000, 55000, 50000);
+        Product pr38 = productCatalog4.newProduct("BMW Z4 Roadster", 50000, 70000, 60000);
+        Product pr39 = productCatalog4.newProduct("BMW M5", 100000, 130000, 115000);
+        Product pr40 = productCatalog4.newProduct("BMW X6", 65000, 90000, 80000);
+        business.getSupplierPerformanceReport(String.valueOf(s4));
 
-        //Supplier 4 - OnePlus
-        Supplier supplier4 = business.getSupplierDirectory().newSupplier("OnePlus");
-        ProductCatalog productCatalog4 = supplier4.getProductCatalog();
-        Product product31 = productCatalog4.newProduct("OnePlus 9", 1000, 2000, 1500);
-        Product product32 = productCatalog4.newProduct("OnePlus 8", 950, 1950, 1450);
-        Product product33 = productCatalog4.newProduct("OnePlus 7", 875, 1940, 1385);
-        Product product34 = productCatalog4.newProduct("OnePlus 6", 833, 1850, 1340);
-        Product product35 = productCatalog4.newProduct("OnePlus 5", 790, 1800, 1295);
-        Product product36 = productCatalog4.newProduct("OnePlus 4", 740, 1750, 1245);
-        Product product37 = productCatalog4.newProduct("OnePlus 3", 690, 1700, 1195);
-        Product product38 = productCatalog4.newProduct("OnePlus 2", 650, 1650, 1150);
-        Product product39 = productCatalog4.newProduct("OnePlus 1", 600, 1600, 1100);
-        Product product40 = productCatalog4.newProduct("OnePlus 0", 580, 1550, 1065);
-        business.getSupplierPerformanceReport(String.valueOf(supplier4));
-
-        //Supplier 5 - Xiaomi
-        Supplier supplier5 = business.getSupplierDirectory().newSupplier("Xiaomi");
-        ProductCatalog productCatalog5 = supplier5.getProductCatalog();
-        Product product41 = productCatalog5.newProduct("Mi 11", 1000, 2000, 1500);
-        Product product42 = productCatalog5.newProduct("Mi 10", 950, 1950, 1450);
-        Product product43 = productCatalog5.newProduct("Mi 9", 875, 1940, 1385);
-        Product product44 = productCatalog5.newProduct("Mi 8", 833, 1850, 1340);
-        Product product45 = productCatalog5.newProduct("Mi 7", 790, 1800, 1295);
-        Product product46 = productCatalog5.newProduct("Mi 6", 740, 1750, 1245);
-        Product product47 = productCatalog5.newProduct("Mi 5", 690, 1700, 1195);
-        Product product48 = productCatalog5.newProduct("Mi 4", 650, 1650, 1150);
-        Product product49 = productCatalog5.newProduct("Mi 3", 600, 1600, 1100);
-        Product product50 = productCatalog5.newProduct("Mi 2", 580, 1550, 1065);
-        business.getSupplierPerformanceReport(String.valueOf(supplier5));
+        //Supplier 5 - Honda
+        Supplier s5 = business.getSupplierDirectory().newSupplier("Honda");
+        ProductCatalog productCatalog5 = s5.getProductCatalog();
+        Product pr41 = productCatalog5.newProduct("Honda Accord", 25000, 35000, 30000);
+        Product pr42 = productCatalog5.newProduct("Honda Civic", 21000, 30000, 27000);
+        Product pr43 = productCatalog5.newProduct("Honda CR-V", 28000, 40000, 35000);
+        Product pr44 = productCatalog5.newProduct("Honda Pilot", 33000, 50000, 45000);
+        Product pr45 = productCatalog5.newProduct("Honda HR-V", 22000, 32000, 28000);
+        Product pr46 = productCatalog5.newProduct("Honda Odyssey", 32000, 45000, 40000);
+        Product pr47 = productCatalog5.newProduct("Honda Ridgeline", 38000, 50000, 45000);
+        Product pr48 = productCatalog5.newProduct("Honda Fit", 16000, 22000, 20000);
+        Product pr49 = productCatalog5.newProduct("Honda Insight", 23000, 32000, 28000);
+        Product pr50 = productCatalog5.newProduct("Honda Passport", 35000, 45000, 40000);
+        business.getSupplierPerformanceReport(String.valueOf(s5));
 
 
         //TOdo: Add more suppliers and products later
         //Customer 1 - John
-        Person person1 = new Person("John");
+        Person person1 = new Person("Alexander");
         CustomerProfile customer1 = business.getCustomerDirectory().newCustomerProfile(person1);
 
         //Customer 2 - Jane
-        Person person2 = new Person("Jane");
+        Person person2 = new Person("Olivia");
         CustomerProfile customer2 = business.getCustomerDirectory().newCustomerProfile(person2);
 
         //Customer 3 - Jack
-        Person person3 = new Person("Jack");
+        Person person3 = new Person("Benjamin");
         CustomerProfile customer3 = business.getCustomerDirectory().newCustomerProfile(person3);
 
         //Customer 4 - Jill
-        Person person4 = new Person("Jill");
+        Person person4 = new Person("Ava");
         CustomerProfile customer4 = business.getCustomerDirectory().newCustomerProfile(person4);
 
         //Customer 5 - Joe
-        Person person5 = new Person("Joe");
+        Person person5 = new Person("Ethan");
         CustomerProfile customer5 = business.getCustomerDirectory().newCustomerProfile(person5);
 
         //Customer 6 - Jim
-        Person person6 = new Person("Jim");
+        Person person6 = new Person("Sophia");
         CustomerProfile customer6 = business.getCustomerDirectory().newCustomerProfile(person6);
 
         //Customer 7 - peter
-        Person person7 = new Person("Peter");
+        Person person7 = new Person("Matthew");
         CustomerProfile customer7 = business.getCustomerDirectory().newCustomerProfile(person7);
 
         //Customer 8 - Paul
-        Person person8 = new Person("Paul");
+        Person person8 = new Person("Chloe");
         CustomerProfile customer8 = business.getCustomerDirectory().newCustomerProfile(person8);
 
         //Customer 9 - Mary
-        Person person9 = new Person("Mary");
+        Person person9 = new Person("James");
         CustomerProfile customer9 = business.getCustomerDirectory().newCustomerProfile(person9);
 
         //Customer 10 - Mark
-        Person person10 = new Person("Mark");
+        Person person10 = new Person("Lily");
         CustomerProfile customer10 = business.getCustomerDirectory().newCustomerProfile(person10);
 
         //SalesPerson 1 - Sam
-        Person person11 = new Person("Sam");
+        Person person11 = new Person("William");
         SalesPersonProfile salesPerson1 = business.getSalesPersonDirectory().newSalesPersonProfile(person11);
-        UserAccount userAccount1 = business.getUserAccountDirectory().newUserAccount(salesPerson1, "sam", "sam123");
+        UserAccount userAccount1 = business.getUserAccountDirectory().newUserAccount(salesPerson1, "will_adams", "WAdams123");
 
         //SalesPerson 2 - Sally
-        Person person12 = new Person("Sally");
+        Person person12 = new Person("Mia");
         SalesPersonProfile salesPerson2 = business.getSalesPersonDirectory().newSalesPersonProfile(person12);
-        UserAccount userAccount2 = business.getUserAccountDirectory().newUserAccount(salesPerson2, "sally", "sally123");
+        UserAccount userAccount2 = business.getUserAccountDirectory().newUserAccount(salesPerson2, "mia_carter", "MiaC789");
 
         //SalesPerson 3 - Steve
-        Person person13 = new Person("Steve");
+        Person person13 = new Person("Lucas");
         SalesPersonProfile salesPerson3 = business.getSalesPersonDirectory().newSalesPersonProfile(person13);
-        UserAccount userAccount3 = business.getUserAccountDirectory().newUserAccount(salesPerson3, "steve", "steve123");
+        UserAccount userAccount3 = business.getUserAccountDirectory().newUserAccount(salesPerson3, "lucas_baker", "LBaker2024");
 
         //MarketingPerson 1 - Mike
-        Person person14 = new Person("Mike");
+        Person person14 = new Person("Emma");
         MarketingPersonProfile marketingPerson1 = business.getMarketingPersonDirectory().newMarketingPersonProfile(person14);
-        UserAccount userAccount4 = business.getUserAccountDirectory().newUserAccount(marketingPerson1, "mike", "mike123");
+        UserAccount userAccount4 = business.getUserAccountDirectory().newUserAccount(marketingPerson1, "emma_turner", "ETurner456");
 
         //MarketingPerson 2 - Mary
-        Person person15 = new Person("Mary");
+        Person person15 = new Person("Noah");
         MarketingPersonProfile marketingPerson2 = business.getMarketingPersonDirectory().newMarketingPersonProfile(person15);
-        UserAccount userAccount5 = business.getUserAccountDirectory().newUserAccount(marketingPerson2, "mary", "mary123");
+        UserAccount userAccount5 = business.getUserAccountDirectory().newUserAccount(marketingPerson2, "noah_foster", "NoahF123");
 
         //Order 1
         Order order1 = business.getMasterOrderList().newOrder(customer1, salesPerson1);
-        OrderItem orderItem1 = order1.newOrderItem(product1, 1550, 1); // Above target
-        OrderItem orderItem2 = order1.newOrderItem(product11, 1700, 1); // Above target
-        OrderItem orderItem3 = order1.newOrderItem(product21, 2300, 1); // Below target
+        OrderItem orderItem1 = order1.newOrderItem(pr1, 13300, 1); // Above target
+        OrderItem orderItem2 = order1.newOrderItem(pr11, 23000, 1); // Below target
+        OrderItem orderItem3 = order1.newOrderItem(pr21, 60000, 1); // Above target
 
 //Order 2
         Order order2 = business.getMasterOrderList().newOrder(customer2, salesPerson2);
-        OrderItem orderItem4 = order2.newOrderItem(product2, 1900, 1); // Above target
-        OrderItem orderItem5 = order2.newOrderItem(product12, 2175, 1); // Above target
-        OrderItem orderItem6 = order2.newOrderItem(product22, 1450, 1); // Below target
+        OrderItem orderItem4 = order2.newOrderItem(pr2, 120000, 1); // Above target
+        OrderItem orderItem5 = order2.newOrderItem(pr12, 35000, 1); // Above target
+        OrderItem orderItem6 = order2.newOrderItem(pr22, 65000, 1); // Below target
 
 //Order 3
         Order order3 = business.getMasterOrderList().newOrder(customer3, salesPerson3);
-        OrderItem orderItem7 = order3.newOrderItem(product3, 1300, 1); // Above target
-        OrderItem orderItem8 = order3.newOrderItem(product13, 2009, 1); // Above target
-        OrderItem orderItem9 = order3.newOrderItem(product23, 1500, 1); // Below target
+        OrderItem orderItem7 = order3.newOrderItem(pr3, 51000, 1); // Below target
+        OrderItem orderItem8 = order3.newOrderItem(pr33, 56000, 1); // Above target
+        OrderItem orderItem9 = order3.newOrderItem(pr43, 40000, 1); // Above target
 
 //Order 4
         Order order4 = business.getMasterOrderList().newOrder(customer4, salesPerson1);
-        OrderItem orderItem10 = order4.newOrderItem(product4, 1000, 1); // Above target
-        OrderItem orderItem11 = order4.newOrderItem(product14, 2060, 1); // Above target
-        OrderItem orderItem12 = order4.newOrderItem(product24, 1375, 1); // Below target
+        OrderItem orderItem10 = order4.newOrderItem(pr4, 75000, 1); // Above target
+        OrderItem orderItem11 = order4.newOrderItem(pr34, 60000, 1); // Below target
+        OrderItem orderItem12 = order4.newOrderItem(pr44,35000 , 1); // Below target
 
 //Order 5
         Order order5 = business.getMasterOrderList().newOrder(customer5, salesPerson2);
-        OrderItem orderItem13 = order5.newOrderItem(product5, 1400, 1); // Above target
-        OrderItem orderItem14 = order5.newOrderItem(product15, 1870, 1); // Above target
-        OrderItem orderItem15 = order5.newOrderItem(product25, 1250, 1); // Below target
+        OrderItem orderItem13 = order5.newOrderItem(pr5, 79000, 1); // Above target
+        OrderItem orderItem14 = order5.newOrderItem(pr15, 40000, 1); // Above target
+        OrderItem orderItem15 = order5.newOrderItem(pr25, 27000, 1); // Below target
 
 //Order 6
         Order order6 = business.getMasterOrderList().newOrder(customer6, salesPerson3);
-        OrderItem orderItem16 = order6.newOrderItem(product6, 1375, 1); // Above target
-        OrderItem orderItem17 = order6.newOrderItem(product16, 1100, 1); // Above target
-        OrderItem orderItem18 = order6.newOrderItem(product26, 1150, 1); // Below target
+        OrderItem orderItem16 = order6.newOrderItem(pr6, 210000, 1); // Above target
+        OrderItem orderItem17 = order6.newOrderItem(pr16, 55000, 1); // Above target
+        OrderItem orderItem18 = order6.newOrderItem(pr26,45000 , 1); // Below target
 
 //Order 7
         Order order7 = business.getMasterOrderList().newOrder(customer7, salesPerson1);
-        OrderItem orderItem19 = order7.newOrderItem(product7, 1650, 1); // Above target
-        OrderItem orderItem20 = order7.newOrderItem(product17, 1150, 1); // Above target
-        OrderItem orderItem21 = order7.newOrderItem(product27, 1250, 1); // Below target
+        OrderItem orderItem19 = order7.newOrderItem(pr7,42000 , 1); // Above target
+        OrderItem orderItem20 = order7.newOrderItem(pr17,33000, 1); // Above target
+        OrderItem orderItem21 = order7.newOrderItem(pr27,30000, 1); // Below target
 
 //Order 8
         Order order8 = business.getMasterOrderList().newOrder(customer8, salesPerson2);
-        OrderItem orderItem22 = order8.newOrderItem(product8, 1250, 1); // Above target
-        OrderItem orderItem23 = order8.newOrderItem(product18, 950, 1); // Above target
-        OrderItem orderItem24 = order8.newOrderItem(product28, 1500, 1); // Below target
+        OrderItem orderItem22 = order8.newOrderItem(pr8,170000,1); // Above target
+        OrderItem orderItem23 = order8.newOrderItem(pr18, 50000, 1); // Above target
+        OrderItem orderItem24 = order8.newOrderItem(pr28, 45000, 1); // Below target
 
 //Order 9
         Order order9 = business.getMasterOrderList().newOrder(customer9, salesPerson3);
-        OrderItem orderItem25 = order9.newOrderItem(product9, 1000, 1); // Above target
-        OrderItem orderItem26 = order9.newOrderItem(product19, 600, 1); // Above target
-        OrderItem orderItem27 = order9.newOrderItem(product29, 1350, 1); // Below target
+        OrderItem orderItem25 = order9.newOrderItem(pr9,120000 , 1); // Below target
+        OrderItem orderItem26 = order9.newOrderItem(pr19, 49000, 1); // Above target
+        OrderItem orderItem27 = order9.newOrderItem(pr29, 55000, 1); // Below target
 
 //Order 10
         Order order10 = business.getMasterOrderList().newOrder(customer10, salesPerson1);
-        OrderItem orderItem28 = order10.newOrderItem(product10, 1010, 1); // Above target
-        OrderItem orderItem29 = order10.newOrderItem(product20, 400, 1); // Above target
-        OrderItem orderItem30 = order10.newOrderItem(product30, 1250, 1); // Below target
+        OrderItem orderItem28 = order10.newOrderItem(pr10,90000, 1); // Above target
+        OrderItem orderItem29 = order10.newOrderItem(pr20, 57000, 1); // Above target
+        OrderItem orderItem30 = order10.newOrderItem(pr30, 45000, 1); // Below target
 
 //        10 more orders
         Order order11 = business.getMasterOrderList().newOrder(customer1, salesPerson2);
-        OrderItem orderItem31 = order11.newOrderItem(product31, 1550, 1); // Above target
-        OrderItem orderItem32 = order11.newOrderItem(product41, 1700, 1); // Above target
-        OrderItem orderItem33 = order11.newOrderItem(product1, 2300, 1); // Below target
+        OrderItem orderItem31 = order11.newOrderItem(pr31, 55000, 1); // Above target
+        OrderItem orderItem32 = order11.newOrderItem(pr41, 34000, 1); // Above target
+        OrderItem orderItem33 = order11.newOrderItem(pr1, 110000, 1); // Below target
 
         Order order12 = business.getMasterOrderList().newOrder(customer2, salesPerson3);
-        OrderItem orderItem34 = order12.newOrderItem(product32, 1900, 1); // Above target
-        OrderItem orderItem35 = order12.newOrderItem(product42, 2175, 1); // Above target
-        OrderItem orderItem36 = order12.newOrderItem(product2, 1450, 1); // Below target
+        OrderItem orderItem34 = order12.newOrderItem(pr32,55000 , 1); // Below target
+        OrderItem orderItem35 = order12.newOrderItem(pr42, 29000, 1); // Above target
+        OrderItem orderItem36 = order12.newOrderItem(pr2, 100000, 1); // Below target
 
         Order order13 = business.getMasterOrderList().newOrder(customer3, salesPerson1);
-        OrderItem orderItem37 = order13.newOrderItem(product33, 1300, 1); // Above target
-        OrderItem orderItem38 = order13.newOrderItem(product43, 2009, 1); // Above target
-        OrderItem orderItem39 = order13.newOrderItem(product3, 1500, 1); // Below target
+        OrderItem orderItem37 = order13.newOrderItem(pr33, 55000, 1); // Above target
+        OrderItem orderItem38 = order13.newOrderItem(pr43, 37000, 1); // Above target
+        OrderItem orderItem39 = order13.newOrderItem(pr3, 54000, 1); // Below target
 
         Order order14 = business.getMasterOrderList().newOrder(customer4, salesPerson2);
-        OrderItem orderItem40 = order14.newOrderItem(product34, 1000, 1); // Above target
-        OrderItem orderItem41 = order14.newOrderItem(product44, 2060, 1); // Above target
-        OrderItem orderItem42 = order14.newOrderItem(product4, 1375, 1); // Below target
+        OrderItem orderItem40 = order14.newOrderItem(pr34,70000 , 1); // Below target
+        OrderItem orderItem41 = order14.newOrderItem(pr44, 47000, 1); // Above target
+        OrderItem orderItem42 = order14.newOrderItem(pr4, 60000, 1); // Below target
 
         Order order15 = business.getMasterOrderList().newOrder(customer5, salesPerson3);
-        OrderItem orderItem43 = order15.newOrderItem(product35, 1400, 1); // Above target
-        OrderItem orderItem44 = order15.newOrderItem(product45, 1870, 1); // Above target
-        OrderItem orderItem45 = order15.newOrderItem(product5, 1250, 1); // Below target
+        OrderItem orderItem43 = order15.newOrderItem(pr35,110000 , 1); // Above target
+        OrderItem orderItem44 = order15.newOrderItem(pr45,31000, 1); // Above target
+        OrderItem orderItem45 = order15.newOrderItem(pr5, 60000, 1); // Below target
 
         Order order16 = business.getMasterOrderList().newOrder(customer6, salesPerson1);
-        OrderItem orderItem46 = order16.newOrderItem(product36, 1375, 1); // Above target
-        OrderItem orderItem47 = order16.newOrderItem(product46, 1100, 1); // Above target
-        OrderItem orderItem48 = order16.newOrderItem(product6, 1150, 1); // Below target
+        OrderItem orderItem46 = order16.newOrderItem(pr36,54000, 1); // Above target
+        OrderItem orderItem47 = order16.newOrderItem(pr46,44000, 1); // Above target
+        OrderItem orderItem48 = order16.newOrderItem(pr6, 190000, 1); // Below target
 
         Order order17 = business.getMasterOrderList().newOrder(customer7, salesPerson2);
-        OrderItem orderItem49 = order17.newOrderItem(product37, 1650, 1); // Above target
-        OrderItem orderItem50 = order17.newOrderItem(product47, 1150, 1); // Above target
-        OrderItem orderItem51 = order17.newOrderItem(product7, 1250, 1); // Below target
+        OrderItem orderItem49 = order17.newOrderItem(pr37, 53000, 1); // Above target
+        OrderItem orderItem50 = order17.newOrderItem(pr47,48000, 1); // Above target
+        OrderItem orderItem51 = order17.newOrderItem(pr7, 36000, 1); // Below target
 
         Order order18 = business.getMasterOrderList().newOrder(customer8, salesPerson3);
-        OrderItem orderItem52 = order18.newOrderItem(product38, 1250, 1); // Above target
-        OrderItem orderItem53 = order18.newOrderItem(product48, 950, 1); // Above target
-        OrderItem orderItem54 = order18.newOrderItem(product8, 1500, 1); // Below target
+        OrderItem orderItem52 = order18.newOrderItem(pr38, 66000, 1); // Above target
+        OrderItem orderItem53 = order18.newOrderItem(pr48, 22000, 1); // Above target
+        OrderItem orderItem54 = order18.newOrderItem(pr8, 155000, 1); // Below target
 
         Order order19 = business.getMasterOrderList().newOrder(customer9, salesPerson1);
-        OrderItem orderItem55 = order19.newOrderItem(product39, 1000, 1); // Above target
-        OrderItem orderItem56 = order19.newOrderItem(product49, 600, 1); // Above target
-        OrderItem orderItem57 = order19.newOrderItem(product9, 1350, 1); // Below target
+        OrderItem orderItem55 = order19.newOrderItem(pr39,120000, 1); // Above target
+        OrderItem orderItem56 = order19.newOrderItem(pr49,30000, 1); // Above target
+        OrderItem orderItem57 = order19.newOrderItem(pr9,120000, 1); // Below target
 
         Order order20 = business.getMasterOrderList().newOrder(customer10, salesPerson2);
-        OrderItem orderItem58 = order20.newOrderItem(product40, 1010, 1); // Above target
-        OrderItem orderItem59 = order20.newOrderItem(product50, 400, 1); // Above target
-        OrderItem orderItem60 = order20.newOrderItem(product10, 1250, 1); // Below target
+        OrderItem orderItem58 = order20.newOrderItem(pr40,89000, 1); // Above target
+        OrderItem orderItem59 = order20.newOrderItem(pr50,43000, 1); // Above target
+        OrderItem orderItem60 = order20.newOrderItem(pr10,72000, 1); // Below target
         
 
         return business;
